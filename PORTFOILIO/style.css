@@ -55,9 +55,15 @@ section {
     border: 1px solid rgb(175, 171, 171);
     box-shadow: inset 0 0 5px rgb(175, 171, 171);
     border-radius: 30px;
-    height: 100vh;
+    height: 90vh;
     width: 85%;
     overflow: hidden;
+    .section-box {
+        display: flex;
+        flex-direction: column;  /* Ensures vertical stacking of child elements */
+        align-items: flex-start; /* Adjust the horizontal alignment if needed */
+    }
+    
 }
 
 .content-wrap {
@@ -203,3 +209,121 @@ nav .active {
     border-radius: 8px;
     margin-top: 10px;
 }
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.PROFILE-img{
+    width: 20%;
+    border: 2px solid red; /* ใช้สีที่เห็นชัดเจน เช่น สีแดง */
+
+}
+.left-grid,
+#PROFILE .right-grid{
+    align-items: center;
+}
+.right-grid {
+    display: flex;
+    justify-content: right; /* Move picture horizontally: left, center, right */
+    align-items: center;    /* Move picture vertically: top, center, bottom */
+    height: 0px;
+    right: 0%;
+}
+.PROFILE-image{
+    width: 50px;
+}
+.section-sub{
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: chocolate;
+}
+.action-btn{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    height: 50px;
+    width: 200px;
+    background-color: chocolate;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+.action-btn:hover{
+    background-color: rgb(199, 99, 28);
+}
+
+.SKILL{
+    margin-bottom: 20px;
+}
+.section-sub2 {
+    margin-top: 50px;
+    font-size: 3rem;
+    color: chocolate;
+}
+.SKILL h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.skill-images {
+    display: flex;
+    gap: 20px;
+    align-items: center;  /* Keep this to ensure logos are vertically centered within their container */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Ensure text is below the logo */
+    align-items: center;     /* Center the logo and text horizontally */
+    justify-content: center; /* Ensure items are centered vertically */
+    text-align: center;      /* Center the text horizontally */
+}
+
+.skill-item img {
+    width: 50px;    /* Adjust logo size */
+    height: auto;   /* Maintain aspect ratio */
+    margin-bottom: 10px;  /* Ensure some space between the logo and text */
+}
+/* Logos should have the same margin and top positioning */
+.skill-images .html-logo,
+.skill-images .python-logo,
+.skill-images .CSS-logo {
+    margin-left: 0px;   /* Remove any extra margins for logos */
+    margin-top: 0px;    /* Remove any vertical spacing */
+    width: 50px;        /* Set a uniform width for logos */
+    height: auto;       /* Maintain the aspect ratio */
+}
+
+/* Make the CSS logo smaller */
+.skill-images .CSS-logo {
+    width: 30px;   /* Smaller width for CSS logo */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 0px;
+}
+.skill-item h3 {
+    margin-top: 30px;  /* Add space between logo and text */
+    font-size: 16px;   /* Adjust text size as needed */
+    text-align: center; /* Center the text horizontally */
+}
+.skill-item .python-logo + h3 {
+    font-size: 10px;      /* Adjust the font size for Python text */
+    margin-top: 20px;     /* Add space between the Python logo and text */       /* Optional: Change text color for Python */
+    font-weight: 600;     /* Optional: Make the text bold */
+}
+
+/* Text under logos */
+.skill-item h3 {
+    margin-top: 10px;  /* Add space between logo and text */
+    font-size: 16px;   /* Adjust text size as needed */
+    text-align: center; /* Center the text horizontally */
+}
+
+
+
